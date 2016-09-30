@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: f14tomcat.ma
-//Last modified: Fri, Sep 30, 2016 12:37:44 PM
+//Last modified: Fri, Sep 30, 2016 12:45:38 PM
 //Codeset: 1252
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "32E69570-5046-D06C-F4D7-DF8F63DF90D2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.8523126217319579 3.5263267541478518 25.565316864233868 ;
-	setAttr ".r" -type "double3" 6110.0616470834175 -1419.8000000001023 4.2362524338610513e-016 ;
+	setAttr ".t" -type "double3" 6.2643365131019175 0.12200299123582115 -7.7620477350146047 ;
+	setAttr ".r" -type "double3" 6116.0616470839277 -1297.3999999998744 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1E02B89A-F046-8A0E-706F-779A001463F2";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 24.90126224953746;
+	setAttr ".coi" 13.006796134975799;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
