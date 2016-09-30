@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: f14tomcat.ma
-//Last modified: Mon, Sep 26, 2016 12:51:51 PM
+//Last modified: Fri, Sep 30, 2016 12:06:11 PM
 //Codeset: UTF-8
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "32E69570-5046-D06C-F4D7-DF8F63DF90D2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.8746952471843521 9.9703596225976234 -18.016722727859271 ;
-	setAttr ".r" -type "double3" 6092.0616470831574 -1280.5999999996516 0 ;
+	setAttr ".t" -type "double3" 6.8523126217319579 3.5263267541478518 25.565316864233868 ;
+	setAttr ".r" -type "double3" 6110.0616470834175 -1419.8000000001023 4.2362524338610513e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1E02B89A-F046-8A0E-706F-779A001463F2";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 24.543744648824628;
+	setAttr ".coi" 24.90126224953746;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -772,22 +772,22 @@ createNode mesh -n "pCylinderShape6" -p "pCylinder6";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "E84B7A8A-984C-9DBA-92E3-75BB8C42ED61";
+	rename -uid "6B037010-FA4E-4FCC-17B8-D792CD0ED093";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0A542476-9C49-921A-A2C8-09896B9B84C1";
+	rename -uid "D525A79D-CB40-77B0-8461-D7B7C39AA073";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "2ABFA4FF-0742-2177-959B-388DC0286BD1";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6167540D-EB4B-D9D5-4314-DAB43F20F7F5";
+	rename -uid "A019452E-794C-E191-1F6A-2C89CC6D426E";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "79A9E9D6-134E-B982-7DB1-C288BA78D897";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "69A9C80B-B549-A6C9-80B4-A4B66DD162AD";
+	rename -uid "91141214-7049-0914-5A04-1BB46E3E004E";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "23221B75-6645-C3E7-42DC-838032F53ABA";
+	rename -uid "EA9080A2-F04E-9E29-9690-CBA3BBCB2AF8";
 createNode polyCube -n "polyCube1";
 	rename -uid "A603D0F0-E446-511B-D9E3-D8AB76D40726";
 	setAttr ".cuv" 4;
@@ -3474,6 +3474,58 @@ createNode groupParts -n "groupParts15";
 	rename -uid "4A40CDD4-9A40-189B-EEFE-FA85810C0079";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:64]";
+createNode polyReduce -n "polyReduce7";
+	rename -uid "057A3EA2-7F43-6980-232D-E29AE5138510";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".ver" 1;
+	setAttr ".trm" 1;
+	setAttr ".p" 50;
+	setAttr ".vct" 7;
+	setAttr ".vmp" -type "string" "";
+	setAttr ".sym" -type "double4" 0 1 0 0 ;
+	setAttr ".stl" 0.01;
+	setAttr ".kqw" 1;
+	setAttr ".cr" yes;
+createNode polyReduce -n "polyReduce8";
+	rename -uid "9FD59348-1245-454A-9A69-B3B10001698D";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".ver" 1;
+	setAttr ".p" 50;
+	setAttr ".vmp" -type "string" "";
+	setAttr ".sym" -type "double4" 0 1 0 0 ;
+	setAttr ".stl" 0.01;
+	setAttr ".kqw" 1;
+	setAttr ".cr" yes;
+createNode polyReduce -n "polyReduce9";
+	rename -uid "314ABC71-DE4F-9C67-648A-578A6EF30216";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".ver" 1;
+	setAttr ".p" 50;
+	setAttr ".vmp" -type "string" "";
+	setAttr ".sym" -type "double4" 0 1 0 0 ;
+	setAttr ".stl" 0.01;
+	setAttr ".kqw" 1;
+	setAttr ".cr" yes;
+createNode polyReduce -n "polyReduce10";
+	rename -uid "E8586894-4B44-2B1C-507F-51A928BFAE00";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".ver" 1;
+	setAttr ".p" 50;
+	setAttr ".vmp" -type "string" "";
+	setAttr ".sym" -type "double4" 0 1 0 0 ;
+	setAttr ".stl" 0.01;
+	setAttr ".kqw" 1;
+	setAttr ".cr" yes;
+createNode polyReduce -n "polyReduce11";
+	rename -uid "1375949B-C04E-DE08-A89D-93A40052AEDA";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".ver" 1;
+	setAttr ".p" 50;
+	setAttr ".vmp" -type "string" "";
+	setAttr ".sym" -type "double4" 0 1 0 0 ;
+	setAttr ".stl" 0.01;
+	setAttr ".kqw" 1;
+	setAttr ".cr" yes;
 select -ne :time1;
 	setAttr ".o" 42;
 	setAttr ".unw" 42;
@@ -3553,8 +3605,8 @@ connectAttr "polyReduce4.out" "pCylinderShape2.i";
 connectAttr "deleteComponent35.og" "pCylinderShape3.i";
 connectAttr "deleteComponent32.og" "pPlaneShape1.i";
 connectAttr "polyReduce5.out" "pCylinderShape4.i";
-connectAttr "polyCylinder5.out" "pCylinderShape5.i";
-connectAttr "pasted__polyCylinder5.out" "|group|pasted__pCylinder5|pasted__pCylinderShape5.i"
+connectAttr "polyReduce11.out" "pCylinderShape5.i";
+connectAttr "polyReduce10.out" "|group|pasted__pCylinder5|pasted__pCylinderShape5.i"
 		;
 connectAttr "polyReduce3.out" "pasted__pCylinderShape4.i";
 connectAttr "polyReduce2.out" "pasted__pasted__pCylinderShape4.i";
@@ -3562,13 +3614,13 @@ connectAttr "pasted__polyCylinder6.out" "|group3|pasted__pCylinder5|pasted__pCyl
 		;
 connectAttr "pasted__pasted__polyCylinder5.out" "|group3|pasted__group|pasted__pasted__pCylinder5|pasted__pasted__pCylinderShape5.i"
 		;
-connectAttr "polyReduce1.out" "|group4|pasted__group3|pasted__pasted__pCylinder5|pasted__pasted__pCylinderShape5.i"
+connectAttr "polyReduce7.out" "|group4|pasted__group3|pasted__pasted__pCylinder5|pasted__pasted__pCylinderShape5.i"
 		;
 connectAttr "pasted__pasted__pasted__polyCylinder5.out" "|group4|pasted__group3|pasted__pasted__group|pasted__pasted__pasted__pCylinder5|pasted__pasted__pasted__pCylinderShape5.i"
 		;
-connectAttr "pasted__pasted__polyCylinder7.out" "|group5|pasted__group3|pasted__pasted__pCylinder5|pasted__pasted__pCylinderShape5.i"
+connectAttr "polyReduce9.out" "|group5|pasted__group3|pasted__pasted__pCylinder5|pasted__pasted__pCylinderShape5.i"
 		;
-connectAttr "pasted__pasted__pasted__polyCylinder6.out" "|group5|pasted__group3|pasted__pasted__group|pasted__pasted__pasted__pCylinder5|pasted__pasted__pasted__pCylinderShape5.i"
+connectAttr "polyReduce8.out" "|group5|pasted__group3|pasted__pasted__group|pasted__pasted__pasted__pCylinder5|pasted__pasted__pasted__pCylinderShape5.i"
 		;
 connectAttr "polyReduce6.out" "pCylinderShape6.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -3879,6 +3931,11 @@ connectAttr "polySeparate7.out[0]" "groupParts14.ig";
 connectAttr "groupId15.id" "groupParts14.gi";
 connectAttr "polySeparate7.out[1]" "groupParts15.ig";
 connectAttr "groupId16.id" "groupParts15.gi";
+connectAttr "polyReduce1.out" "polyReduce7.ip";
+connectAttr "pasted__pasted__pasted__polyCylinder6.out" "polyReduce8.ip";
+connectAttr "pasted__pasted__polyCylinder7.out" "polyReduce9.ip";
+connectAttr "pasted__polyCylinder5.out" "polyReduce10.ip";
+connectAttr "polyCylinder5.out" "polyReduce11.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape2.iog" ":initialShadingGroup.dsm" -na;
